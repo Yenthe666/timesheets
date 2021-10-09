@@ -1,0 +1,46 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_timesheet_geolocation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-31 16:43+0000\n"
+"PO-Revision-Date: 2021-08-31 16:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_timesheet_geolocation
+#: model:ir.model.fields,field_description:hr_timesheet_geolocation.field_account_analytic_line__analytic_latitude
+msgid "Analytic Latitude"
+msgstr "Breedtegraad"
+
+#. module: hr_timesheet_geolocation
+#: model:ir.model,name:hr_timesheet_geolocation.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Kostenplaatsregel"
+
+#. module: hr_timesheet_geolocation
+#: model:ir.model.fields,field_description:hr_timesheet_geolocation.field_account_analytic_line__analytic_longitude
+msgid "Analytic Longitude"
+msgstr "Lengtegraad"
+
+#. module: hr_timesheet_geolocation
+#: model:ir.model.fields,field_description:hr_timesheet_geolocation.field_account_analytic_line__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: hr_timesheet_geolocation
+#: model:ir.model.fields,field_description:hr_timesheet_geolocation.field_account_analytic_line__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_timesheet_geolocation
+#: model:ir.model.fields,field_description:hr_timesheet_geolocation.field_account_analytic_line____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
