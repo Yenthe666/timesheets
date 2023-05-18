@@ -1,28 +1,36 @@
-odoo.define("hr_timesheet_geolocation.TimesheetGeolocationOne2Many", function (
-    require
-) {
-    "use strict";
+/** @odoo-module */
 
-    var fieldRegistry = require("web.field_registry");
-    var session = require("web.session");
-    require("sale_timesheet_edit.so_line_many2one");
+import { patch } from '@web/core/utils/patch';
+import { session } from "@web/session";
+import { TimesheetsOne2ManyField } from "@sale_timesheet/components/so_line_field/so_line_field";
 
-    var TimesheetGeolocationOne2Many = fieldRegistry.get("so_line_one2many");
-
-    TimesheetGeolocationOne2Many.include({
-        /**
-         * @override
-         */
-        init: function () {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    session.user_context.default_analytic_latitude =
-                        position.coords.latitude;
-                    session.user_context.default_analytic_longitude =
-                        position.coords.longitude;
-                });
+patch(TimesheetsOne2ManyField.prototype, 'hr_timesheet_TimesheetsOne2ManyField', {
+    setup() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                session.user_context.default_analytic_latitude =
+                    position.coords.latitude;
+                session.user_context.default_analytic_longitude =
+                    position.coords.longitude;
+            });
+        }
+        this._super.apply(this, arguments);
+    },
+    get rendererProps() {
+        var self = this;
+        const archInfo = this.activeField.views[this.viewMode];
+        const editable = archInfo.editable || this.props.editable;
+        var props = this._super.apply(this, arguments);
+        props.onAdd = (params) => {
+            params.editable =
+                !this.props.readonly && ("editable" in params ? params.editable : editable);
+            if(! params.context) {
+                params.context = {};
             }
-            this._super.apply(this, arguments);
-        },
-    });
+            params.context['default_analytic_latitude'] = session.user_context.default_analytic_latitude;
+            params.context['default_analytic_longitude'] = session.user_context.default_analytic_longitude;
+            this.onAdd(params);
+        };
+        return props;
+    }
 });
