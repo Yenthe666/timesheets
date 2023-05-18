@@ -14,7 +14,7 @@ patch(ListController.prototype, 'hr_timesheet_geolocation_ListController', {
                     self.props.context.default_analytic_latitude =
                             position.coords.latitude;
                     self.props.context.default_analytic_longitude =
-                            position.coords.latitude;
+                            position.coords.longitude;
                 }
             });
         }

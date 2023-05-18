@@ -28,21 +28,6 @@ patch(TimerGridRenderer.prototype, 'hr_timesheet_TimerGridRenderer', {
                 });
             }
         });
-//        if (navigator.geolocation) {
-//            navigator.geolocation.getCurrentPosition(function (position) {
-//                if(self.props) {
-//                    if(! self.props.context) {
-//                        self.props.context = {};
-//                    }
-//                    self.props.context['default_analytic_latitude'] = position.coords.latitude;
-//                    self.props.context['default_analytic_longitude'] = position.coords.longitude;
-//                }
-//                self.default_analytic_latitude =
-//                    position.coords.latitude;
-//                self.default_analytic_longitude =
-//                    position.coords.longitude;
-//            });
-//        }
     },
     async _setProjectTask(projectId, taskId) {
         if (!this.stateTimer.projectId) {

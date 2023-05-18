@@ -11,8 +11,8 @@
                     postion="inside"
                 >
 
-                    <field name="analytic_latitude" />
-                    <field name="analytic_longitude" />
+                    <field name="analytic_latitude" readonly="1" invisible="1" force_save="1"/>
+                    <field name="analytic_longitude" readonly="1" invisible="1" force_save="1"/>
                     <button name="open_google_maps" type="object" icon="fa-map-pin" title="map"/>
                 </xpath>
             </field>
