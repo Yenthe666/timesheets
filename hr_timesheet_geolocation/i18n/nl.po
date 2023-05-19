@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0+e\n"
+"Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-31 16:43+0000\n"
-"PO-Revision-Date: 2021-08-31 16:43+0000\n"
+"POT-Creation-Date: 2023-05-18 19:42+0000\n"
+"PO-Revision-Date: 2023-05-18 19:42+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "Breedtegraad"
 #. module: hr_timesheet_geolocation
 #: model:ir.model,name:hr_timesheet_geolocation.model_account_analytic_line
 msgid "Analytic Line"
-msgstr "Kostenplaatsregel"
+msgstr "Analytische regel"
 
 #. module: hr_timesheet_geolocation
 #: model:ir.model.fields,field_description:hr_timesheet_geolocation.field_account_analytic_line__analytic_longitude
@@ -31,16 +31,7 @@ msgid "Analytic Longitude"
 msgstr "Lengtegraad"
 
 #. module: hr_timesheet_geolocation
-#: model:ir.model.fields,field_description:hr_timesheet_geolocation.field_account_analytic_line__display_name
-msgid "Display Name"
-msgstr "Schermnaam"
-
-#. module: hr_timesheet_geolocation
-#: model:ir.model.fields,field_description:hr_timesheet_geolocation.field_account_analytic_line__id
-msgid "ID"
+#: model_terms:ir.ui.view,arch_db:hr_timesheet_geolocation.hr_timesheet_line_tree_geolocation
+#: model_terms:ir.ui.view,arch_db:hr_timesheet_geolocation.view_task_form2_inherited
+msgid "map"
 msgstr ""
-
-#. module: hr_timesheet_geolocation
-#: model:ir.model.fields,field_description:hr_timesheet_geolocation.field_account_analytic_line____last_update
-msgid "Last Modified on"
-msgstr "Laatst gewijzigd op"

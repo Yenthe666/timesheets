@@ -7,9 +7,9 @@
             <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree" />
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='unit_amount']" position="after">
-                    <field name="analytic_latitude" readonly="1" invisible="1"/>
-                    <field name="analytic_longitude" readonly="1" invisible="1"/>
-                    <button name="open_google_maps" type="object" icon="fa-map-pin"/>
+                    <field name="analytic_latitude" readonly="1" invisible="1" force_save="1"/>
+                    <field name="analytic_longitude" readonly="1" invisible="1" force_save="1"/>
+                    <button name="open_google_maps" type="object" icon="fa-map-pin" title="map"/>
                 </xpath>
             </field>
         </record>
